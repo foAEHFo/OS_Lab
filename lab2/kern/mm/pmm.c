@@ -34,7 +34,11 @@ static void check_alloc_page(void);
 
 // init_pmm_manager - initialize a pmm_manager instance
 static void init_pmm_manager(void) {
+<<<<<<< HEAD
     pmm_manager = &best_fit_pmm_manager;
+=======
+    pmm_manager = &default_pmm_manager;
+>>>>>>> 57902cf2d5a103a91c45cd38691e39603244962b
     cprintf("memory management: %s\n", pmm_manager->name);
     pmm_manager->init();
 }
