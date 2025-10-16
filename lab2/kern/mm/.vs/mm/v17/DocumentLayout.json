@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\best_fit_pmm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:best_fit_pmm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\mmu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mmu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\pmm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pmm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\memlayout.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:memlayout.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\default_pmm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:default_pmm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\pmm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pmm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\best_fit_pmm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:best_fit_pmm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pmm.c",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\pmm.c",
+              "RelativeDocumentMoniker": "pmm.c",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\pmm.c",
+              "RelativeToolTip": "pmm.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-15T12:28:39.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mmu.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\mmu.h",
+              "RelativeDocumentMoniker": "mmu.h",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\mmu.h",
+              "RelativeToolTip": "mmu.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-15T12:28:33.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "best_fit_pmm.c",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\best_fit_pmm.c",
+              "RelativeDocumentMoniker": "best_fit_pmm.c",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\best_fit_pmm.c",
+              "RelativeToolTip": "best_fit_pmm.c",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-15T11:55:35.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "default_pmm.c",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\default_pmm.c",
+              "RelativeDocumentMoniker": "default_pmm.c",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\default_pmm.c",
+              "RelativeToolTip": "default_pmm.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-15T12:06:47.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "memlayout.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\memlayout.h",
+              "RelativeDocumentMoniker": "memlayout.h",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\memlayout.h",
+              "RelativeToolTip": "memlayout.h",
+              "ViewState": "AgIAACkAAAAAAAAAAAD4vzkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-15T12:17:29.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pmm.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\pmm.h",
+              "RelativeDocumentMoniker": "pmm.h",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\pmm.h",
+              "RelativeToolTip": "pmm.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAD4vyUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-15T12:12:51.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "best_fit_pmm.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\best_fit_pmm.h",
+              "RelativeDocumentMoniker": "best_fit_pmm.h",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\OS\\labcode\\lab2\\kern\\mm\\best_fit_pmm.h",
+              "RelativeToolTip": "best_fit_pmm.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-15T11:55:10.741Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
