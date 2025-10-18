@@ -1,0 +1,384 @@
+
+OpenSBI v0.4 (Jul  2 2019 11:53:53)
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name          : QEMU Virt Machine
+Platform HART Features : RV64ACDFIMSU
+Platform Max HARTs     : 8
+Current Hart           : 0
+Firmware Base          : 0x80000000
+Firmware Size          : 112 KB
+Runtime SBI Version    : 0.1
+
+PMP0: 0x0000000080000000-0x000000008001ffff (A)
+PMP1: 0x0000000000000000-0xffffffffffffffff (A,R,W,X)
+DTB Init
+HartID: 0
+DTB Address: 0x82200000
+Physical Memory from DTB:
+  Base: 0x0000000080000000
+  Size: 0x0000000008000000 (128 MB)
+  End:  0x0000000087ffffff
+DTB init completed
+(THU.CST) os is loading ...
+Special kernel symbols:
+  entry  0xffffffffc02000d8 (virtual)
+  etext  0xffffffffc02017d6 (virtual)
+  edata  0xffffffffc0206018 (virtual)
+  end    0xffffffffc0206160 (virtual)
+Kernel executable memory footprint: 25KB
+memory management: buddy_system_pmm_manager
+physcial memory map:
+  memory: 0x0000000008000000, [0x0000000080000000, 0x0000000087ffffff].
+============================================
+Starting Buddy System Tests
+============================================
+=== Basic Allocation and Free Test ===
+Initial free pages: 16384
+Allocating 10 pages for p0...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020f598, size=16] 
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16368
+-------------------------------------------------------------
+Allocating 10 pages for p1...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16352
+-------------------------------------------------------------
+Allocating 10 pages for p2...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020fa98, size=16] 
+Order 5: Empty
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16336
+-------------------------------------------------------------
+p0 address: 0xffffffffc020f318
+p1 address: 0xffffffffc020f598
+p2 address: 0xffffffffc020f818
+Freeing p0...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020f318, size=16] [0xffffffffc020fa98, size=16] 
+Order 5: Empty
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16352
+-------------------------------------------------------------
+Freeing p1...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020fa98, size=16] 
+Order 5: [0xffffffffc020f318, size=32] 
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16368
+-------------------------------------------------------------
+Freeing p2...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: Empty
+Order 6: Empty
+Order 7: Empty
+Order 8: Empty
+Order 9: Empty
+Order 10: Empty
+Order 11: Empty
+Order 12: Empty
+Order 13: Empty
+Order 14: [0xffffffffc020f318, size=16384] 
+Total free pages: 16384
+-------------------------------------------------------------
+Basic test completed successfully!
+
+=== Minimum Allocation Test (1 page) ===
+Initial free pages: 16384
+Allocated 1 page at address: 0xffffffffc020f318
+------------------ Buddy System Free Lists ------------------
+Order 0: [0xffffffffc020f340, size=1] 
+Order 1: [0xffffffffc020f368, size=2] 
+Order 2: [0xffffffffc020f3b8, size=4] 
+Order 3: [0xffffffffc020f458, size=8] 
+Order 4: [0xffffffffc020f598, size=16] 
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16383
+-------------------------------------------------------------
+Freed 1 page
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: Empty
+Order 6: Empty
+Order 7: Empty
+Order 8: Empty
+Order 9: Empty
+Order 10: Empty
+Order 11: Empty
+Order 12: Empty
+Order 13: Empty
+Order 14: [0xffffffffc020f318, size=16384] 
+Total free pages: 16384
+-------------------------------------------------------------
+Minimum allocation test completed successfully!
+
+=== Maximum Allocation Test (16384 pages) ===
+Initial free pages: 16384
+Allocated 16384 pages at address: 0xffffffffc020f318
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: Empty
+Order 6: Empty
+Order 7: Empty
+Order 8: Empty
+Order 9: Empty
+Order 10: Empty
+Order 11: Empty
+Order 12: Empty
+Order 13: Empty
+Order 14: Empty
+Total free pages: 0
+-------------------------------------------------------------
+Freed 16384 pages
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: Empty
+Order 6: Empty
+Order 7: Empty
+Order 8: Empty
+Order 9: Empty
+Order 10: Empty
+Order 11: Empty
+Order 12: Empty
+Order 13: Empty
+Order 14: [0xffffffffc020f318, size=16384] 
+Total free pages: 16384
+-------------------------------------------------------------
+Maximum allocation test completed successfully!
+
+=== Difficult Allocation Test ===
+Initial free pages: 16384
+Allocating 10 pages for p0...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020f598, size=16] 
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16368
+-------------------------------------------------------------
+Allocating 50 pages for p1...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020f598, size=16] 
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: Empty
+Order 7: [0xffffffffc0210718, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16304
+-------------------------------------------------------------
+Allocating 100 pages for p2...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020f598, size=16] 
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: Empty
+Order 7: Empty
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16176
+-------------------------------------------------------------
+p0 address: 0xffffffffc020f318
+p1 address: 0xffffffffc020fd18
+p2 address: 0xffffffffc0210718
+Freeing p1 first...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: [0xffffffffc020f598, size=16] 
+Order 5: [0xffffffffc020f818, size=32] 
+Order 6: [0xffffffffc020fd18, size=64] 
+Order 7: Empty
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16240
+-------------------------------------------------------------
+Freeing p0...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: Empty
+Order 6: Empty
+Order 7: [0xffffffffc020f318, size=128] 
+Order 8: [0xffffffffc0211b18, size=256] 
+Order 9: [0xffffffffc0214318, size=512] 
+Order 10: [0xffffffffc0219318, size=1024] 
+Order 11: [0xffffffffc0223318, size=2048] 
+Order 12: [0xffffffffc0237318, size=4096] 
+Order 13: [0xffffffffc025f318, size=8192] 
+Order 14: Empty
+Total free pages: 16256
+-------------------------------------------------------------
+Freeing p2...
+------------------ Buddy System Free Lists ------------------
+Order 0: Empty
+Order 1: Empty
+Order 2: Empty
+Order 3: Empty
+Order 4: Empty
+Order 5: Empty
+Order 6: Empty
+Order 7: Empty
+Order 8: Empty
+Order 9: Empty
+Order 10: Empty
+Order 11: Empty
+Order 12: Empty
+Order 13: Empty
+Order 14: [0xffffffffc020f318, size=16384] 
+Total free pages: 16384
+-------------------------------------------------------------
+Difficult test completed successfully!
+
+=== Edge Cases Test ===
+Initial free pages: 16384
+Testing allocation of 0 pages...
+Allocation of 0 pages correctly failed
+Testing allocation beyond available pages...
+Allocation of 16385 pages correctly failed
+Edge cases test completed successfully!
+
+Final free pages: 16384
+Initial free pages: 16384
+============================================
+All Buddy System Tests Completed Successfully!
+============================================
+check_alloc_page() succeeded!
+satp virtual address: 0xffffffffc0205000
+satp physical address: 0x0000000080205000
