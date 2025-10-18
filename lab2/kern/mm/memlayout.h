@@ -59,6 +59,15 @@ typedef struct {
     unsigned int nr_free;           // number of free pages in this free list
 } free_area_t;
 
+typedef struct{
+    unsigned int max;
+    list_entry_t array[15]; // 代表了阶数最多到14
+    unsigned int free;
+    // max用于存储最大页数；
+    // array[i]维护的是第i阶所有空闲(还能分配出去)的块
+    // free用于存储当前空闲页框的个数
+}Buddy_system;
+
 #endif /* !__ASSEMBLER__ */
 
 #endif /* !__KERN_MM_MEMLAYOUT_H__ */
