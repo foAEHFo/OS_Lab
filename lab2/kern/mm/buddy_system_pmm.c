@@ -123,11 +123,9 @@ buddy_system_alloc_pages(size_t n)
     }
     // 获取分配页数对应的阶数
     unsigned int order = getOrderOfTwo(pageNumber);
-
+    int canFind = 1;
     // 现在开始分配正确的块
-    while (1)
-    // 为什么这里直接死循环寻找呢
-    // 因为如果n <= buddy.free,那么就一定可以获取到一个能够分配的块
+    while (canFind)
     {
         if (!list_empty(&buddy.array[order]))
         {
@@ -169,7 +167,8 @@ buddy_system_alloc_pages(size_t n)
                 }
                 if (i > buddy.max)
                 {
-                    // 防止数组越界
+                    // 出现这种情况就意味着无法找到合适的块来分配,所以让外层循环阶数
+                    canFind = 0;
                     break;
                 }
                 tmp *= 2;
