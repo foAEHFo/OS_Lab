@@ -167,7 +167,7 @@ buddy_system_alloc_pages(size_t n)
                 }
                 if (i > buddy.max)
                 {
-                    // 出现这种情况就意味着无法找到合适的块来分配,所以让外层循环阶数
+                    // 出现这种情况就意味着无法找到合适的块来分配,所以让外层循环退出
                     canFind = 0;
                     break;
                 }
