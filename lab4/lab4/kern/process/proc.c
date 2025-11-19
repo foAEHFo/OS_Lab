@@ -107,7 +107,7 @@ alloc_proc(void)
         proc->state = PROC_UNINIT;
         proc->pid = -1;
         proc->runs = 0;
-        proc->kstack = (uintptr_t)kmalloc(KSTACKSIZE);
+        proc->kstack = 0;
         proc->need_resched = 0;
         proc->parent = NULL;
         proc->mm = NULL;
@@ -115,7 +115,7 @@ alloc_proc(void)
         proc->tf = NULL;
         proc->pgdir = boot_pgdir_pa;
         proc->flags = 0;
-        proc->name[0] = '\0';
+        memset(&proc->name, 0, PROC_NAME_LEN);
     }
     return proc;
 }
@@ -326,13 +326,38 @@ int do_fork(uint32_t clone_flags, uintptr_t stack, struct trapframe *tf)
      *   nr_process:   the number of process set
      */
 
-    //    1. call alloc_proc to allocate a proc_struct
-    //    2. call setup_kstack to allocate a kernel stack for child process
-    //    3. call copy_mm to dup OR share mm according clone_flag
-    //    4. call copy_thread to setup tf & context in proc_struct
-    //    5. insert proc_struct into hash_list && proc_list
-    //    6. call wakeup_proc to make the new child process RUNNABLE
-    //    7. set ret vaule using child proc's pid
+    //    1.分配并初始化进程控制块
+    proc = alloc_proc();
+    if (proc == NULL){
+        goto fork_out;
+    }
+    //    2. 分配并初始化内核栈（setup_stack函数）
+    if (setup_kstack(proc) != 0){
+        goto bad_fork_cleanup_proc;
+    }
+
+    //    3. 根据clone_flags决定是复制还是共享内存管理系统（copy_mm函数）
+    if (copy_mm(clone_flags, proc) != 0){
+        goto bad_fork_cleanup_kstack;
+    }
+
+
+    //    4. 设置进程的中断帧和上下文（copy_thread函数）
+    copy_thread(proc, stack, tf);
+    //    5.把设置好的进程加入链表
+    proc->pid = get_pid();       // 分配唯一 pid
+    proc->parent = current;      // 父进程是 current
+
+    list_add(&proc_list, &proc->list_link); // 加入进程链表
+    hash_proc(proc);                         // 加入 hash 表
+
+    nr_process++;  // 进程数量 +1
+
+    //    6. 将新建的进程设为就绪态
+
+    proc->state=PROC_RUNNABLE;
+    //    7.将返回值设为线程id
+    ret = proc->pid;
     
 fork_out:
     return ret;
