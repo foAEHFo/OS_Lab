@@ -186,7 +186,7 @@ void proc_run(struct proc_struct *proc)
 {
     if (proc != current)
     {
-        // LAB4:EXERCISE3 YOUR CODE
+        // LAB4:EXERCISE3 2313752
         /*
          * Some Useful MACROs, Functions and DEFINEs, you can use them in below implementation.
          * MACROs or Functions:
@@ -195,7 +195,23 @@ void proc_run(struct proc_struct *proc)
          *   lsatp():                   Modify the value of satp register
          *   switch_to():              Context switching between two processes
          */
+        
+        bool intr_flag;
+        // 1. 禁用中断，以保证上下文切换的原子性
+        local_intr_save(intr_flag);
 
+        // 2. 切换当前进程指针,保存旧进程的引用，以便传递给 switch_to
+        struct proc_struct *prev = current;
+        current = proc;
+
+        // 3. 切换页表,lsatp 函数会将 proc->pgdir 的值加载到 satp 寄存器中，并刷新 TLB，使新的地址映射生效。
+        lsatp(proc->pgdir);
+
+        // 4. 切换上下文,调用 switch_to 汇编函数，保存 prev 进程的上下文，恢复 proc 进程的上下文。这个函数执行后，CPU 的寄存器状态将变为 proc 进程上次被切换出去时的状态。
+        switch_to(&(prev->context), &(proc->context));
+
+        // 5. 允许中断,下文切换完成后，重新开启中断。
+        local_intr_restore(intr_flag);
     }
 }
 
