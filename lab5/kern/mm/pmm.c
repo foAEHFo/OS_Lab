@@ -422,24 +422,6 @@ int copy_range(pde_t *to, pde_t *from, uintptr_t start, uintptr_t end,
              * (3) memory copy from src_kvaddr to dst_kvaddr, size is PGSIZE
              * (4) build the map of phy addr of  nage with the linear addr start
              */
-              /* (1) 源页面的内核虚拟地址 */
-            void *src_kvaddr = page2kva(page);
-            /* (2) 目标页面的内核虚拟地址 */
-            void *dst_kvaddr = page2kva(npage);
-
-            /* (3) 拷贝整页内容 */
-            memcpy(dst_kvaddr, src_kvaddr, PGSIZE);
-
-            /* (4) 在目标页表中建立映射，权限与源页相同 */
-            ret = page_insert(to, npage, start, perm);
-            if (ret != 0)
-            {
-                /* 建立映射失败，释放分配的页 */
-                free_page(npage);
-                return -E_NO_MEM;
-            }
-            /* 记录该页的虚拟地址映射信息（与 pgdir_alloc_page 一致） */
-            npage->pra_vaddr = start;
 
             assert(ret == 0);
         }
