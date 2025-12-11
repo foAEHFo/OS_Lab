@@ -494,7 +494,7 @@ int do_fork(uint32_t clone_flags, uintptr_t stack, struct trapframe *tf)
 
     //    6. 将新建的进程设为就绪态
 
-    proc->state=PROC_RUNNABLE;
+    wakeup_proc(proc);
     //    7.将返回值设为线程id
     ret = proc->pid;
     // LAB5 YOUR CODE : (update LAB4 steps)
@@ -993,10 +993,7 @@ init_main(void *arg)
     assert(list_prev(&proc_list) == &(initproc->list_link));
 
     cprintf("init check memory pass.\n");
-    while (1)
-    {
-        schedule();
-    }
+    return 0;
 }
 
 // proc_init - set up the first kernel thread idleproc "idle" by itself and
