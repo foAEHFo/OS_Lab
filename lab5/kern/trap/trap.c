@@ -136,7 +136,7 @@ void interrupt_handler(struct trapframe *tf)
         /* 3. 每 TICK_NUM 次中断进行操作 */
         if (ticks % TICK_NUM == 0) {
             print_ticks();
-            print_num++;
+           
 
             /* 判断是否有进程正在运行，如果有则标记需要调度 */
             if (current) {
