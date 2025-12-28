@@ -94,7 +94,7 @@ void print_regs(struct pushregs *gpr)
 }
 
 extern struct mm_struct *check_mm_struct;
-
+static int print_num = 0;
 void interrupt_handler(struct trapframe *tf)
 {
     intptr_t cause = (tf->cause << 1) >> 1;
@@ -131,6 +131,12 @@ void interrupt_handler(struct trapframe *tf)
 
         // lab6: YOUR CODE  (update LAB3 steps)
         //  在时钟中断时调用调度器的 sched_class_proc_tick 函数
+        clock_set_next_event();
+        sched_class_proc_tick(current);
+        if (++ticks % TICK_NUM == 0) {
+            
+            print_num++;
+        }
 
         break;
     case IRQ_H_TIMER:
